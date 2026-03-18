@@ -1,1 +1,12 @@
 df = pd.read_csv("Crop_recommendation.csv")
+
+# Fix column names
+df.columns = df.columns.str.strip()
+
+st.write(df.columns)  # debug
+
+df["Yield"] = (
+    0.3 * df["N"] +
+    0.2 * df["rainfall"] -
+    0.1 * df["temperature"]
+)
