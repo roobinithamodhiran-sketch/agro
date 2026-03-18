@@ -8,5 +8,5 @@ st.write(df.columns)  # debug
 df["Yield"] = (
     0.3 * df["N"] +
     0.2 * df["rainfall"] -
-    0.1 * df["temperature"]
-)
+    0.1 * df["temperature"])
+    df.columns = df.columns.str.strip()
